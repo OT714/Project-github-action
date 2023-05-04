@@ -73,3 +73,7 @@ Nana repo
   >> Demo
 
   >> Syntax  
+
+  git remote add origin git@github.com:OT714/Project-github-action.git
+git branch -M main
+git push -u origin main
