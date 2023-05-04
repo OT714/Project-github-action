@@ -1,0 +1,75 @@
+################################################################################################################                                                  
+#                                                   Github-action
+################################################################################################################
+Created by : Omer
+Date: 5/4/23
+
+>> What is Github-action
+  
+  Github-action is a platform to automate software development workflows. It is a kind of CICD tool and CICD pipeline 
+   is one of many workflows that you can automate with Github-action.
+
+       
+>> Developer workflow uses cases
+
+# What are those developer workflows?
+
+      In a Github organization we need to generally accomplish multiple tasks for the teams to work collaboratively:
+
+      - if an issue arise you want to check if it is minor or major
+      - if it reproducable
+      - assign it to a contibutor
+                                  - if a PR is created you want to review the platform
+                                  - if the bug is fixed in case you have a bug
+                                  - you want to merge to master branch if everything look good
+
+                                                                    - Start build the CICD
+                                                                    - If everything look good you will prepare a release note
+                                                                    - update version number
+
+>> Basic concepts: Github Events and Actions
+
+
+ we want to automate this process above as much as possible so that developers can be concentrate on developing 
+    more features and code. For that to happen we need to implement Github-action.
+
+    So when something happens IN or TO the repository we can configure automatic actions which will be executed in response.
+    The things happening IN or TO the repo are called Events:
+      - someone created a PR
+      - someone joined the repository(contributor)
+      - someone created an issue
+      - someone merged the PR into the master branch
+      - others apps integrate to our tools can also produce such events.
+
+
+    To automate the workflows you to : 
+
+      - Litsen to the Events : PR, contr. joined, issue created, PR merged, others apps integrate
+
+      - Trigger workflows : if one of this Events occurs a specific workflows will be trigger automatically  
+
+            Exple: Someone created an issue, you would like to automatically sort the issue, label it, assign it 
+                   to a specific person, maybe write a script or test which will try to automatically reproduce the issue.
+                   All these things are automated with actions. Each of these actions are separate (sort, label...) 
+                   and the chain of those actions are what we call workflow.
+
+>> CICD pipeline with Github Actions!
+
+  Most common workflow for our repository are:
+
+   Code commit >> Test >> Build >> Push >> Deploy
+
+  So instead of setup a complete CICD tool Github-action ease the process because we don't need a third party integration
+   tool and also setup the CICD pipeline is easy. Developer will have a quick access to a CiCD tool for their tasks.
+    Github-action give you an environment in which Nodes and Docker are available, version can be specified, It can be 
+    simply connect to the target  and deploy. 
+
+Resources:
+Nana repo
+    git@github.com:nanuchi/my-project.git
+
+  >> Benefits of Github Actions CICD
+
+  >> Demo
+
+  >> Syntax  
